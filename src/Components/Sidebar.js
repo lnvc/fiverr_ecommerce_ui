@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { Row, Col } from 'react-bootstrap';
-import './App.css'
+// import '../App.css'
 
 class Sidebar extends React.Component {
     constructor(props){
@@ -27,7 +27,7 @@ class Sidebar extends React.Component {
     handleMouseOver = (e) => {
 
         let rowColor= {...this.state.rowColor};
-        if(this.state.isActive != e.target.id){
+        if(this.state.isActive !== e.target.id){
             rowColor[e.target.id] = "#5390d9"
         }
         this.setState({rowColor});
@@ -35,7 +35,7 @@ class Sidebar extends React.Component {
 
     hanldeMouseOut = (e) => {
         let rowColor= {...this.state.rowColor};
-        if(this.state.isActive != e.target.id){
+        if(this.state.isActive !== e.target.id){
             rowColor[e.target.id] = "#5e60ce"
         }
         this.setState({rowColor});
@@ -55,7 +55,7 @@ class Sidebar extends React.Component {
         return(
             <div className="m-3">
               <Row>
-                  <h4 style={{ color: "#f1faee" }}>Agency/Client Name</h4>
+                  <h4 style={{ cursor: "pointer", color: "#f1faee" }}>Agency/Client Name</h4>
               </Row>
               <Row className="my-2 mt-4">
                 <small style={{ color: "#a8dadc"}}>ACTIVITY</small>
